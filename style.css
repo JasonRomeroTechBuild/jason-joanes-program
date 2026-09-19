@@ -1,0 +1,13 @@
+body {
+	background-color: black;
+	color: white;
+	font-family: Arial, sans-serif;
+}
+
+.main-logo {
+	display: block;
+	width: 420px;
+	max-width: 90%;
+	height: auto;
+	margin: 20px auto;
+}
