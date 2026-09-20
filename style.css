@@ -1226,70 +1226,84 @@ body {
         animation: none;
     }
 }
-/* Smoother mobile scrolling on homepage */
+/* Mobile-safe retro glam */
 @media (max-width: 768px) {
 
-    html.home-page body {
-        background-attachment: scroll;
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
     }
 
-    /* Keep the retro grain visible, but stop constantly moving it */
-    html.home-page::after {
-        animation: none !important;
-    }
-}
-html.home-page body::before,
-html.home-page body::after {
-    animation: none !important;
-}
-
-html.home-page .disco-frame,
-html.home-page .disco-frame::before,
-html.home-page .disco-frame::after {
-    animation: none !important;
-}
-/* Mobile performance fix for homepage */
-@media (max-width: 768px) {
-
-    html.home-page body {
+    body {
         background-attachment: scroll !important;
-    }
 
-    /* Remove expensive full-screen overlays on mobile homepage */
-    html.home-page::before,
-    html.home-page::after,
-    html.home-page body::before,
-    html.home-page body::after,
-    html.home-page .disco-frame {
-        display: none !important;
-    }
+        background:
+            radial-gradient(
+                circle at 15% 20%,
+                rgba(255, 90, 175, 0.22),
+                transparent 28%
+            ),
+            radial-gradient(
+                circle at 85% 30%,
+                rgba(255, 215, 130, 0.18),
+                transparent 30%
+            ),
+            radial-gradient(
+                circle at 50% 75%,
+                rgba(120, 60, 135, 0.25),
+                transparent 38%
+            ),
+            radial-gradient(
+                circle,
+                rgba(255,255,255,0.18) 1px,
+                transparent 2px
+            ),
+            linear-gradient(
+                145deg,
+                #050304,
+                #190713 45%,
+                #080407 100%
+            );
 
-    /* Lightweight retro frame instead */
-    html.home-page body {
+        background-size:
+            auto,
+            auto,
+            auto,
+            34px 34px,
+            auto;
+
         border: 5px solid #f6c76b;
 
         box-shadow:
-            inset 0 0 0 3px #fff0c2,
-            inset 0 0 0 7px #d96aa7,
-            inset 0 0 18px rgba(217, 106, 167, 0.25);
+            inset 0 0 0 2px #fff0c2,
+            inset 0 0 0 5px #d96aa7,
+            inset 0 0 18px rgba(217, 106, 167, 0.28);
 
         box-sizing: border-box;
     }
-}
-@media (max-width: 768px) {
 
-    html.home-page main::before {
+    /* Remove the expensive full-screen animated overlays */
+    html::before,
+    html::after,
+    body::before,
+    body::after {
         display: none !important;
     }
 
-    html.home-page,
-    html.home-page body {
-        overflow-x: hidden !important;
-        max-width: 100%;
+    /* Hide the animated marquee frame on phones */
+    .disco-frame {
+        display: none !important;
     }
 
-    html.home-page main {
-        overflow-x: hidden;
-        max-width: 100%;
+    /* Remove decorative sparkle row that can cause overflow */
+    main::before {
+        display: none !important;
+    }
+
+    /* Keep button glamour without excessive animation */
+    .button::before,
+    .button::after {
+        animation-duration: 4s;
     }
 }
