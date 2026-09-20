@@ -149,3 +149,59 @@ p {
     transform: translateY(-3px);
     border-color: var(--pink);
 }
+@media (max-width: 768px) {
+
+    .main-logo {
+        width: 320px;
+        max-width: 95%;
+    }
+
+    main {
+        padding: 15px 18px 40px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
+    margin: 0;
+    padding: 9px 14px;
+}
+.feature-card,
+.story-card,
+.submission-intro,
+.about-section {
+    padding: 20px;
+    border-radius: 14px;
+}
+.button {
+    padding: 12px 18px;
+    text-align: center;
+}
+.button {
+    display: block;
+    width: fit-content;
+}
+.hero {
+    padding: 30px 10px;
+}
+.tagline {
+    font-size: 1.1rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
