@@ -37,17 +37,86 @@
         <p>
             Got a messy situation, question, advice request,
             or something you just need to get off your chest?
-        </p>
 
-        <p>
-            Anonymous submissions are coming soon.
         </p>
 
         <h2>What can you submit?</h2>
+         <p>
+        Stories, questions, relationship drama, workplace foolery,
+        advice requests, and whatever else is keeping you up at night.
+    </p>
+<form action=https://formspree.io/f/xvkgzajb
+      method="POST"
+      class="story-form">
 
+    <label for="submission-type">
+        What kind of mess are we dealing with?
+    </label>
+
+    <select id="submission-type"
+            name="submission_type"
+            required>
+
+        <option value="">Choose one</option>
+        <option value="story">Story / Tea</option>
+        <option value="advice">Advice Request</option>
+        <option value="question">Question</option>
+        <option value="relationship">Relationship Drama</option>
+        <option value="workplace">Workplace Foolery</option>
+        <option value="other">Something Else</option>
+
+    </select>
+
+    <label for="nickname">
+        What should Jason call you? (optional)
+    </label>
+
+    <input type="text"
+           id="nickname"
+           name="nickname"
+           placeholder="Anonymous, Messy in Michigan, etc.">
+
+    <label for="subject">
+        Give this situation a headline
+    </label>
+
+    <input type="text"
+           id="subject"
+           name="subject"
+           required
+           placeholder="My coworker stole my lunch... again">
+
+    <label for="story">
+        Tell me everything
+    </label>
+
+    <textarea id="story"
+              name="story"
+              rows="10"
+              required
+              placeholder="Start from the beginning..."></textarea>
+
+    <label class="checkbox-row">
+        <input type="checkbox"
+               name="permission_to_share"
+               value="yes"
+               required>
+
+        I understand my submission may be discussed,
+        edited for clarity, or shared on The Jason Joanes Program.
+    </label>
+
+    <button type="submit" class="button">
+        Send It to Jason
+    </button>
+
+</form>
         <p>
-            Stories, questions, relationship drama, workplace foolery,
-            advice requests, and whatever else is keeping you up at night.
+            <p class="form-note">
+    Please do not include passwords, financial information,
+    medical records, home addresses, or other highly sensitive
+    personal information in your submission.
+</p>
         </p>
 
     </section>
