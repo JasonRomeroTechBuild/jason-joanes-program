@@ -1276,3 +1276,20 @@ html.home-page .disco-frame::after {
         box-sizing: border-box;
     }
 }
+@media (max-width: 768px) {
+
+    html.home-page main::before {
+        display: none !important;
+    }
+
+    html.home-page,
+    html.home-page body {
+        overflow-x: hidden !important;
+        max-width: 100%;
+    }
+
+    html.home-page main {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+}
